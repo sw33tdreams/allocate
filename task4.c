@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main() {
   int size = 0;
@@ -13,6 +15,7 @@ int main() {
   printf("how many elements do you wanna add?\n");
   scanf("%d", &size1);
   size1 = size1 + size;
+  p = (int*)realloc(p, size1);
   printf("enter %d integers\n", size1 - size);
   for(int i = size; i < size1; i++){
     scanf("%d", &p[i]);
