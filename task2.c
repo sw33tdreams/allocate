@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
   printf("enter size of your string\n");
@@ -7,6 +8,7 @@ int main() {
   getchar();
   printf("now enter your string\n");
   char* p = (char*) calloc(size, sizeof(char));
+  if(p == 0) exit(-1);
   fgets(p, size, stdin);
   puts("your string is:");
   puts(p);
